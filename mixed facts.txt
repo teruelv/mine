@@ -1,0 +1,15 @@
+There are no Carmichael numbers with less than three prime divisors
+
+Phi(ab)=Phi(a)Phi(b)*d/phi(d) | d = gcd(a, b)
+
+a^oo < b^oo iff a + b < b + a | a, b finite strings
+
+For n = p1^n1 * p2^n2 * ... pr ^ nr,
+
+the number of ordered pairs (a,b)having the same lcm n is
+|{(a,b): lcm(a,b)=n}|=(2n1 +1)(2n2 +1)···(2nr +1)
+
+The number of relatively prime ordered pairs (a,b)having the same lcm n is 
+|{(a,b): gcd(a,b)=1,lcm(a,b)=n}|=2^w(n)        
+
+w(n) denotes the number of prime divisors of n

@@ -1,0 +1,3 @@
+Settings->Debugger->Default->Debugger initialization commands
+escribir
+set max-value-size unlimited
