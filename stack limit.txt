@@ -1,0 +1,8 @@
+#include <sys/resource.h>
+
+and in the main() function you need to write these lines
+
+rlimit R;
+getrlimit(RLIMIT_STACK, &R);
+R.rlim_cur = R.rlim_max;
+setrlimit(RLIMIT_STACK, &R);
