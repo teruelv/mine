@@ -39,13 +39,21 @@ struct STP { // persistent segment tree
         else
             update(r[p], r[x] = size(), m + 1, R, v);
     }
-    int query(int p, int x, int L, int R, int v) {
+    int query(int p, int x, int L, int R, int v) {   // freq(v)
         if(L == R)
             return st[x] - st[p];
         int m = (L + R) >> 1;
         if(v <= m)
             return query(l[p], l[x], L, m, v);
         return query(r[p], r[x], m + 1, R, v);
+    }
+    int Kth(int p, int x, int L, int R, int kth) {
+        if(L == R)return L;
+        int m = (L + R) >> 1;
+        int izq = st[l[x]] - st[l[p]];
+        if(izq >= kth)
+            return Kth(l[p], l[x], L, m, kth);
+        return Kth(r[p], r[x], m + 1, R, kth - izq);
     }
     int ask(int pre, int nxt, int v) {
         return query(rt[pre - 1], rt[nxt], 1, N, v);
