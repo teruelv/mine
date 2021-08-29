@@ -1,1 +1,2 @@
-int x = __builtin_popcount(121); // # de bits activos
+__builtin_popcount(n); // # de bits activos
+__builtin_parity(n); // count odd?
