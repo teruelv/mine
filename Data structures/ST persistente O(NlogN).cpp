@@ -40,16 +40,24 @@ struct STP { // persistent segment tree
         else
             update(st[p].r, st[x].r = sz, m + 1, R, v);
     }
-    int query(int p, int x, int L, int R, int kth) {
+    int query(int p, int x, int L, int R, int v) {   // freq(v)
+        if(L == R)
+            return st[x].v - st[p].v;
+        int m = (L + R) >> 1;
+        if(v <= m)
+            return query(st[p].l, st[x].l, L, m, v);
+        return query(st[p].r, st[x].r, m + 1, R, v);
+    }
+    int Kth(int p, int x, int L, int R, int kth) {
         if(L == R)return L;
         int m = (L + R) >> 1;
         int izq = st[st[x].l].v - st[st[p].l].v;
         if(izq >= kth)
-            return query(st[p].l, st[x].l, L, m, kth);
-        return query(st[p].r, st[x].r, m + 1, R, kth - izq);
+            return Kth(st[p].l, st[x].l, L, m, kth);
+        return Kth(st[p].r, st[x].r, m + 1, R, kth - izq);
     }
     int ask(int pre, int nxt, int v) {
-        return query(rt[pre - 1], rt[nxt], 1, N, v);
+        return Kth(rt[pre - 1], rt[nxt], 1, N, v);
     }
     void add(int v) {
         int tam = rt.size();
