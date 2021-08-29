@@ -1,4 +1,4 @@
- Suffix Array and LCP in O(N). Algorithm DC3
+// Suffix Array and LCP in O(N). Algorithm DC3
 #include <cstdlib>
 #include <string>
 #include <iostream>
