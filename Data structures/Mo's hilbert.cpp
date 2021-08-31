@@ -77,14 +77,10 @@ int main() {
     x = 1, y = 0;
 
     for(auto [l, r, p, z] : mo) {
-        while(y < r)
-            add(a[++y]);
-        while(y > r)
-            del(a[y--]);
-        while(x > l)
-            add(a[--x]);
-        while(x < l)
-            del(a[x++]);
+        while(y < r)add(a[++y]);
+        while(x > l)add(a[--x]);
+        while(y > r)del(a[y--]);
+        while(x < l)del(a[x++]);
         sol[p - 1] = v;
     }
 
