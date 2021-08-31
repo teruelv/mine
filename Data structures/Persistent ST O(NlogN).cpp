@@ -8,23 +8,12 @@ struct STP { // persistent segment tree
     int N, sz;
     STP(int size) {
         N = size, sz = 0;
+        push();
         rt.push_back(0);
-        build(1, N);
     }
     inline void push() {
         sz++;
         st.push_back(node(0, 0, 0));
-    }
-    void build(int L, int R) {
-        int p = sz;
-        push();
-        if(L != R) {
-            int m = (L + R) >> 1;
-            st[p].l = sz;
-            build(L, m);
-            st[p].r = sz;
-            build(m + 1, R);
-        }
     }
     void copy(int x, int y) {
         st[y] = st[x];
