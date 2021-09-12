@@ -53,16 +53,14 @@ struct DSU_ROLLBACK {
     int find(int k) {
         return ds[k].p == k ? k : find(ds[k].p);
     }
-    void merge(int a, int b, bool save = 1) {
+    void merge(int a, int b) {
         a = find(a);
         b = find(b);
         if(a == b)return;
         if(ds[a].sz > ds[b].sz)
             swap(a, b);
-        if(save) {
-            s.push(ds[a]);
-            s.push(ds[b]);
-        }
+        s.push(ds[a]);
+        s.push(ds[b]);
         comps--;
         ds[a].p = b;
         ds[b].sz += ds[a].sz;
@@ -138,7 +136,7 @@ int main() {
                 p[ii(x, y)] = i;
             } else {
                 int &id = p[ii(x, y)];
-                update(1, 1, m, id, i, ii(x, y), ds);
+                update(1, 1, m, id, i - 1, ii(x, y), ds);
                 id = 0;
             }
         }
