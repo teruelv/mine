@@ -12,17 +12,17 @@ typedef __int128 LL;
 
 int sq;
 
-struct query {
+struct Query {
     int a, b, id;
-    query(int x = 0, int y = 0, int z = 0) : a(x), b(y), id(z) {}
-    bool operator < (const query &q) const {
+    Query(int x = 0, int y = 0, int z = 0) : a(x), b(y), id(z) {}
+    bool operator < (const Query &q) const {
         if(a / sq != q.a / sq)
             return a / sq < q.a / sq;
         return b < q.b;
     }
 } ;
 
-vector <query> mo;
+vector <Query> mo;
 
 int n, q, x, y;
 
