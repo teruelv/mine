@@ -6,7 +6,7 @@ a^oo < b^oo iff a + b < b + a | a, b finite strings
 
 For n = p1^n1 * p2^n2 * ... pr ^ nr,
 
-the number of ordered pairs (a,b)having the same lcm n is
+the number of ordered pairs (a,b) having the same lcm n is
 |{(a,b): lcm(a,b)=n}|=(2n1 +1)(2n2 +1)···(2nr +1)
 
 The number of relatively prime ordered pairs (a,b) having the same lcm n is 
