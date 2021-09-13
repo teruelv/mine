@@ -1,4 +1,4 @@
-struct SEGMENT_TREE {   // O(QlogMAX) tiempo y memoria
+struct SEGMENT_TREE {   // O(~3*QlogMAX) tiempo y memoria
     struct node {
         ii v, lz;
         int l, r;
