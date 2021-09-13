@@ -20,17 +20,6 @@ typedef long long ll;
 typedef pair <int, int> ii;
 typedef __int128 LL;
 
-ll pot(ll b, ll e, ll mod) {
-    ll ret = 1;
-    while(e) {
-        if(e & 1)
-            ret = ret * b % mod;
-        b = b * b % mod;
-        e /= 2;
-    }
-    return ret;
-}
-
 mt19937 rng(chrono::high_resolution_clock::now().time_since_epoch().count());
 
 static int rnd(int lo, int hi) {
