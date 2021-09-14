@@ -2,3 +2,4 @@ Maximum closure (if not DAG, run SCC, solve in condensed graph)
 - bi >= 0 ? add edge from S to i with flow bi
 - bi < 0 ? add edge from i to T with flow -bi 
 - for edges a -> b add edge from a to b with flow oo
+Max cost = sum max(bi, 0) - maxFlow/minCut
