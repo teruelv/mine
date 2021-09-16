@@ -1,3 +1,10 @@
+/*
+Knapsack: Can you form K by adding some subset of A? (without repetition)
+Sum(Ai) <= ~2e5, maybe a bit more
+Can answer multiple querys
+*/
+
+
 #include <bits/stdc++.h>
 #include <ext/pb_ds/tree_policy.hpp>
 #include <ext/pb_ds/assoc_container.hpp>
