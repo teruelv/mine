@@ -33,6 +33,7 @@ mat fix(mat &rule, vector <int> &in) {
             v[j] = in[rule[i][j]];
         ret.push_back(v);
     }
+    // comment here to keep equal rotations
     sort(all(ret));
     uni(ret);
     return ret;
