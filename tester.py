@@ -1,5 +1,6 @@
-#https://github.com/dush1729/Auto-Tester
-
+# https://github.com/dush1729/Auto-Tester
+# use like, where k is how much cases 
+# tester.py -c ac.cpp -w wa.cpp -g gen.cpp -t k
 import os
 import sys
 
