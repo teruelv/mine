@@ -1,5 +1,5 @@
 # https://github.com/dush1729/Auto-Tester
-# use like, where k is how much cases 
+# use like, where k is how much cases should fail
 # tester.py -c ac.cpp -w wa.cpp -g gen.cpp -t k
 import os
 import sys
