@@ -1,6 +1,6 @@
 # https://github.com/dush1729/Auto-Tester
 # use like, where k is how much cases should fail
-# tester.py -c ac.cpp -w wa.cpp -g gen.cpp -t k
+# tester.py -c correct.cpp -w wrong.cpp -g generator.cpp -t k
 import os
 import sys
 
