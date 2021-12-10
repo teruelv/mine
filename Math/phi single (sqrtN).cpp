@@ -1,4 +1,4 @@
-int phi(ll n) {
+ll phi(ll n) {
     ll ret = n;
     for(ll i = 2; i * i <= n; i++) {
         if(n % i == 0) {
