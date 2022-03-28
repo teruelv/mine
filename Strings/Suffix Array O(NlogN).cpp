@@ -36,11 +36,11 @@ const int MAX = 1e5 + 5;
 const int mod = 998244353;
 
 struct SuffixArray {
-    vector <int> sa, lcp;
+    vector <int> sa, lcp, pos;
     SuffixArray(string &s, int lim = 256) {
         int n = s.size() + 1, k = 0, a, b;
-        vector <int> x(all(s) + 1), y(n), ws(max(n, lim)), Rank(n);
-        sa = lcp = y, iota(all(sa), 0);
+        vector <int> x(all(s) + 1), y(n), ws(max(n, lim));
+        sa = lcp = pos = y, iota(all(sa), 0);
         for(int j = 0, p = 0; p < n; j = max(1, j * 2), lim = p) {
             p = j, iota(all(y), n - j);
             for(int i = 0; i < n; i++)
@@ -58,9 +58,9 @@ struct SuffixArray {
             }
         }
         for(int i = 1; i < n; i++)
-            Rank[sa[i]] = i;
-        for(int i = 0, j; i < n - 1; lcp[Rank[i++]] = k)
-            for(k && k--, j = sa[Rank[i] - 1];
+            pos[sa[i]] = i;
+        for(int i = 0, j; i < n - 1; lcp[pos[i++]] = k)
+            for(k && k--, j = sa[pos[i] - 1];
                     s[i + k] == s[j + k]; k++);
     }
 } ;
