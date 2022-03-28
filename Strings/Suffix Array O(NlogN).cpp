@@ -81,7 +81,5 @@ int main() {
         cout << s.substr(SA.sa[i], 1e9) << '\n';
     }
 
-    cout << sol << '\n';
-
     return 0;
 }
