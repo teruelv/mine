@@ -6,7 +6,7 @@ void calc_phi() {
             for(ll j = i * 2; j < MAX; j += i) {
                 if(!phi[j])
                     phi[j] = j;
-                phi[j] = (phi[j] / i) * (i - 1) % mod;
+                phi[j] -= phi[j] / i;
             }
         }
     }
