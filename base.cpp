@@ -5,7 +5,7 @@
 using namespace std;
 using namespace __gnu_pbds;
 
-template <class T> using Tree = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+template <class T> using Tree = tree <T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
 #ifdef ONLINE_JUDGE
 #pragma GCC optimize("Ofast","unroint-loops","omit-frame-pointer","inline","03")
@@ -15,9 +15,6 @@ template <class T> using Tree = tree<T, null_type, less<T>, rb_tree_tag, tree_or
 #define rall(x) (x).rbegin(), (x).rend()
 #define uni(x) (x).erase(unique(all(x)), (x).end())
 #define rnk(x, y) upper_bound(all((x)), (y)) - (x).begin()
-
-template <class T = int> using ii = pair <T, T>;
-template <class T = int> using tri = tuple <T, T, T>;
 
 typedef long double ld;
 typedef long long ll;
