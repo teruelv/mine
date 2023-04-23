@@ -14,6 +14,7 @@ void init() {
 }
 
 void AddEdge(int u, int v, int cap, int cost) {
+    N = max(N, u), N = max(N, v);
     ady[u].push_back(E.size());
     E.push_back(Edge(u, v, cap, cost));
     ady[v].push_back(E.size());
