@@ -8,7 +8,7 @@ using namespace __gnu_pbds;
 template <class T> using Tree = tree <T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
 #ifdef ONLINE_JUDGE
-#pragma GCC optimize("Ofast","unroint-loops","omit-frame-pointer","inline","03")
+#pragma GCC optimize("Ofast","unroll-loops","omit-frame-pointer","inline","03")
 #endif // ONLINE_JUDGE
 
 #define all(x) (x).begin(), (x).end()
