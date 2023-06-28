@@ -1,4 +1,4 @@
-#given a prob matrix from a directed graph, returns the simplified fractions of the absorving markov chain for each final state
+#given a probability matrix from a directed graph, returns the simplified fractions of the absorving markov chain for each final state
 
 import fractions
 
