@@ -1,4 +1,3 @@
-# https://github.com/dush1729/Auto-Tester
 # use like, where k is how much cases should fail
 # tester.py -c correct.cpp -w wrong.cpp -g generator.cpp -t k
 import os
@@ -47,3 +46,5 @@ while t < testcase:
 		t += 1
 		print(str(t) + " testcase found!")
 os.system("rm dummy")
+
+# https://github.com/dush1729/Auto-Tester
