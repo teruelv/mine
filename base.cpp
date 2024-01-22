@@ -40,6 +40,8 @@ int main() {
     cin.tie(0);
 
     int tc = 1;
+    cin >> tc;
+    
     while(tc--)
         solve();
 }
