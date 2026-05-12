@@ -99,7 +99,6 @@ struct SuffixArray {
             vector<int> rec(m + 1);
             for (int i = 0; i < m; ++i) rec[i] = rec_s[i] + 1;
             rec[m] = 0;
-
             vector<int> rec_sa = sais(move(rec), rec_upper + 1);
             for (int i = 0; i < m; ++i) ord[i] = lms[rec_sa[i + 1]];
         } else {
@@ -142,7 +141,6 @@ struct SuffixArray {
             if (b[i] > upper) upper = b[i];
         }
         b[n] = 0;
-
         sa = sais(move(b), upper);
         build_lcp(a);
     }
