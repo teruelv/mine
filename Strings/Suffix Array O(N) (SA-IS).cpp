@@ -9,6 +9,7 @@ using namespace std;
 // and it's speed can be improved as shown here:    https://synergy.cs.vt.edu/pubs/papers/timoshevskaya-saisopt-iccabs14.pdf
 // but this is fast enough for most ICPC problems,
 // if not all
+// Tested against some random problems +            https://codeforces.com/edu/course/2/lesson/2
 
 struct SuffixArray {
     vector<int> sa, lcp, pos;
