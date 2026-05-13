@@ -5,13 +5,13 @@
 using namespace std;
 using namespace __gnu_pbds;
 
-template <class T> using Tree = tree <T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
+template<class T> using Tree = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
 #ifdef ONLINE_JUDGE
-#pragma GCC optimize("Ofast","unroll-loops","omit-frame-pointer","inline","03")
+#pragma GCC optimize("Ofast","unroll-loops","omit-frame-pointer","inline","O3")
 #endif // ONLINE_JUDGE
 
-#define all(x) (x).begin(), (x).end()
+#define all(x) x.begin(), x.end()
 #define rall(x) (x).rbegin(), (x).rend()
 #define uni(x) (x).erase(unique(all(x)), (x).end())
 #define rnk(x, y) upper_bound(all((x)), (y)) - (x).begin()
@@ -22,11 +22,11 @@ typedef __int128 LL;
 
 mt19937 rng(chrono::high_resolution_clock::now().time_since_epoch().count());
 
-static int rnd(int lo, int hi) {
-    return uniform_int_distribution <int> (lo, hi)(rng);
+static ll rnd(ll lo, ll hi) {
+    return uniform_int_distribution<ll>(lo, hi)(rng);
 }
 
-const ll oo = 1e18;
+const ll INF = 1e18;
 
 const ll MAX = 2e5 + 5;
 const ll mod = 1e9 + 7;
@@ -41,7 +41,7 @@ int main() {
 
     int tc = 1;
     cin >> tc;
-    
-    while(tc--)
+
+    while (tc--)
         solve();
 }
