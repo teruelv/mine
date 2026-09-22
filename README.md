@@ -28,7 +28,7 @@ The folders contain solutions and implementations covering common competitive-pr
 
 ## Base Template
 
-`base.cpp` contains the standard C++ template used as a starting point for contest solutions.
+`base.cpp` contains my standard C++ template used as a starting point for contest solutions.
 
 It includes commonly used aliases, macros, fast I/O setup, random-number generation, and GNU PBDS support.
 
