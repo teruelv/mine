@@ -46,4 +46,4 @@ The repository also contains miscellaneous reference material, including mathema
 
 This is an evolving collection rather than a formally maintained library. Some implementations have been used and tested extensively, while others are experimental or have not yet been fully verified.
 
-For that reason, individual files should be evaluated independently before being used in a contest or another project.
+Individual files should be evaluated independently before being used in a contest or another project.
