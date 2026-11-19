@@ -128,7 +128,8 @@ struct SuffixArray {
         int n = s.size();
         vector<int> a(n + 1, 0);
         for (int i = 0; i < n; ++i) a[i] = s[i] + 1;
-        sa = sais(move(a), *max_element(a.begin(), a.end()));
+        int upper = *max_element(a.begin(), a.end());
+        sa = sais(move(a), upper);
         build_lcp(s);
     }
 
